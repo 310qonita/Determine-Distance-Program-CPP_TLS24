@@ -1,0 +1,26 @@
+#include <iostream> 
+#include <iomanip>  
+using namespace std;
+int main() {
+    double velocity, time, distance;
+
+    cout << "Enter the velocity of the object (in meters per second): ";
+    cin >> velocity;
+
+    cout << "Enter the time (in seconds): ";
+    cin >> time;
+
+    if (velocity < 0 || time < 0) {
+        cerr << "Error: Velocity and time must be non-negative values." << endl;
+        return 1;
+    }
+
+    distance = velocity * time;
+
+    cout << fixed << setprecision(2);
+
+    cout << "The distance traveled by the object is: " << distance << " meters." << endl;
+
+
+    return 0;
+}
